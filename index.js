@@ -1,5 +1,5 @@
 // index.js
-const knex = require("knex")(require("./knexfile").development)
+const knex = require("knex")(require("./knexfile")[process.env.NODE_ENV || "development"])
 const express = require("express")
 const morgan = require("morgan")
 const bodyParser = require("body-parser")
